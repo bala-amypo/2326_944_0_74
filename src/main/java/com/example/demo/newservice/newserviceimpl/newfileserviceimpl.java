@@ -5,9 +5,10 @@ import com.example.demo.entity.StudentValidation;
 import com.example.demo.service.StudentService;
 @Service
 public class newfileserviceimpl implements newfileservice{
+    private final NewfileRepo rep;
     @Override
     public StudentValidation savedata(StudentValidation st){
-
+      return rep.save(newfile);
     }
     @Override
     public StudentValidation getidval(Long id){
