@@ -20,10 +20,10 @@ public class newfileserviceimpl implements newfileservice{
     }
     @Override
     public StudentValidatin update(Long id,StudentValidation st){
-        NewFileEntity existing=getValId(id);
+        StudentValidation existing=getValId(id);
         existing.setName(Newfile.getName())
         existing.setEmail(Newfile.getEmail());
-        
+
       return rep.save(existing);
     }
     @Override
