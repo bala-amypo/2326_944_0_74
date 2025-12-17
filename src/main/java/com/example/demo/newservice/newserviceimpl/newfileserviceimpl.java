@@ -12,18 +12,18 @@ public class newfileserviceimpl implements newfileservice{
     }
     @Override
     public StudentValidation getidval(Long id){
-     return rep.get(id);
+     return rep.findById(id);
     }
     @Override
     public List<StudentValidation> getall(){
-      retrun rep.get();
+      retrun rep.findall();
     }
     @Override
     public StudentValidatin update(Long id,StudentValidation st){
-      return rep.update(id,st);
+      return rep.update(id,newfile);
     }
     @Override
     public void delete(Long id){
-        return rep.remove(id)
+         rep.remove(id)
     }
 }
