@@ -6,7 +6,7 @@ package com.example.demo.newentity;
   import jakarta.validation.constranints.*;
   
  
- 
+ @NewfileEntity@Table(name="Student")
  
  public class NewfileEntity {
     @Id 
