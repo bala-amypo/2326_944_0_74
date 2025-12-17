@@ -16,11 +16,15 @@ public class newfileserviceimpl implements newfileservice{
     }
     @Override
     public List<StudentValidation> getall(){
-      retrun rep.findAll();
+      retur]=n rep.findAll();
     }
     @Override
     public StudentValidatin update(Long id,StudentValidation st){
-      return rep.update(id,newfile);
+        NewFileEntity existing=getValId(id);
+        existing.setName(Newfile.getName())
+        existing.setEmail(Newfile.getEmail());
+        
+      return rep.save(existing);
     }
     @Override
     public void delete(Long id){
