@@ -3,5 +3,8 @@ import com.example.demo.newentity.StudentValidation;
 
 public interface StudentValidation{
     StudentValidation savedata(StudentValidatin newfile);
-    StudentValidation getid(Long id)
+    StudentValidation getid(Long id);
+    List<StudentValidation>getall();
+    StudentValidation update(Long id,StudentValidation,newfile);
+    void delete(Long id);
 }
