@@ -1,11 +1,11 @@
-package com.example.home.controller;
+package com.example.demo.controller;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.home.entity.Studententity;
-import com.example.home.service.Studentservice;
+import com.example.demo.entity.StudentEntity;
+import com.example.demo.service.StudentService;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,27 +13,27 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 @RestController
-public class Studentcontroller {
+public class StudentController {
     @Autowired
-    Studentservice src;
+    StudentService src;
     @PostMapping("/post")  
-    public Studententity postdata(@RequestBody Studententity st){
+    public StudentEntity postdata(@RequestBody StudentEntity st){
         return src.savedata(st);
     }
     @GetMapping("/get")
-    public List<Studententity>getdata(){
+    public List<StudentEntity>getdata(){
         return src.retdata();
     }
     @GetMapping("/getid/{id}")
-    public Studententity getIdVal(@PathVariable int id){
+    public StudentEntity getIdVal(@PathVariable int id){
         return src.id(id);
     }
     @PutMapping("/update/{id}")
-    public Studententity updateId(@PathVariable int id,@RequestBody Studententity st){
+    public StudentEntity updateId(@PathVariable int id,@RequestBody StudentEntity st){
      return src.upid(id,st);
     }
     @DeleteMapping("/delete/{id}")
-    public Studententity deleteval(@PathVariable int id){
+    public StudentEntity deleteval(@PathVariable int id){
         return src.dltid(id);
     }
 }
