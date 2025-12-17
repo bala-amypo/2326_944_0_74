@@ -7,4 +7,5 @@ public interface StudentValidation{
     List<StudentValidation>getall();
     StudentValidation update(Long id,StudentValidation,newfile);
     void delete(Long id);
+
 }
