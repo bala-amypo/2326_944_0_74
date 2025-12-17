@@ -23,4 +23,16 @@ public class StudentEntity{
     public void setName(String name){
         this.name=name;
     }
+    public String getEmail(){
+        return email;
+    }
+    public void setEmail(String email){
+        this.email=email;
+    }
+     public float getCgpa(){
+        return cgpa;
+    }
+    public void setCgpa(float cgpa){
+        this.cgpa=cgpa;
+    }
 }
