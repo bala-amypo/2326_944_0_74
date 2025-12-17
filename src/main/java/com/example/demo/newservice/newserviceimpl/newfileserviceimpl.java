@@ -16,7 +16,7 @@ public class newfileserviceimpl implements newfileservice{
     }
     @Override
     public List<StudentValidation> getall(){
-      retrun rep.findall();
+      retrun rep.findAll();
     }
     @Override
     public StudentValidatin update(Long id,StudentValidation st){
@@ -24,6 +24,6 @@ public class newfileserviceimpl implements newfileservice{
     }
     @Override
     public void delete(Long id){
-         rep.remove(id)
+         rep.deleteById(id)
     }
 }
