@@ -1,8 +1,8 @@
 package com.example.service.impl;
 import java.util.*;
 import org.springframework.stereotype.Service;
-import com.example.demo.entity.StudentValidation;
-import com.example.demo.service.StudentService;
+import com.example.demo.newntity.StudentValidation;
+import com.example.demo.newservice.newfileservice;
 @Service
 public class newfileserviceimpl implements newfileservice{
     private final NewfileRepo rep;
@@ -19,7 +19,7 @@ public class newfileserviceimpl implements newfileservice{
       retur]=n rep.findAll();
     }
     @Override
-    public StudentValidatin update(Long id,StudentValidation st){
+    public StudentValidation update(Long id,StudentValidation st){
         StudentValidation existing=getValId(id);
         existing.setName(Newfile.getName())
         existing.setEmail(Newfile.getEmail());
